@@ -36,7 +36,7 @@ module Piet
 
     def optimize_jpg(path, opts)
       vo = opts[:verbose] ? "-v" : "-q"
-      `jpegoptim -f --strip-all #{vo} #{path}`
+      `jpegoptim -f --strip-all --all-progressive #{vo} #{path}`
     end
 
     def pngquant_for(path, opts)
